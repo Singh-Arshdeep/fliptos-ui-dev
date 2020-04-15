@@ -2,15 +2,17 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Recommendation from './recommendation/Recommendation';
+import NavBar from './navigation/NavBar';
+import SearchBar from './search/SearchBar'
 
 const useStyles = makeStyles((theme) => ({
     nav: {
         height: '10vh',
-        backgroundColor: 'yellow'
+        backgroundColor: 'yellow',
     },
     searchBar: {
         height: '10vh',
-        backgroundColor: 'red'
+        backgroundColor: 'red', 
     },
     recommendation: {
         height: '50vh',
@@ -36,8 +38,10 @@ export default function Landing() {
         <div>
             <Grid container spacing={0}>
                 <Grid item xs={12} className={classes.nav}>
+                    <NavBar/>
                 </Grid>
                 <Grid item xs={12} className={classes.searchBar}>
+                    {/* <SearchBar/> */}
                 </Grid>
                 <Grid item xs={12} className={classes.recommendation}>
                     <Recommendation/>
