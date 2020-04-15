@@ -1,11 +1,13 @@
 import React from 'react';
-import Landing from './components/landing/Landing';
+import Landing from './components/Landing/Landing';
+import AdvSearch from './components/AdvSearch/AdvSearch';
 import './App.css';
 
 function App() {
   return (
     <div>
-      <Landing/>
+      {/* <Landing/> */}
+    <AdvSearch/>
     </div>
   );
 }
