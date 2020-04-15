@@ -9,10 +9,16 @@ const useStyles = makeStyles((theme) => ({
     nav: {
         height: '10vh',
         backgroundColor: 'yellow',
+        [theme.breakpoints.down('xs')]: {
+            height: '6vh',
+        }
     },
     searchBar: {
         height: '10vh',
         backgroundColor: 'red', 
+        [theme.breakpoints.down('xs')]: {
+            height: '6vh',
+        }
     },
     recommendation: {
         height: '50vh',
@@ -41,7 +47,7 @@ export default function Landing() {
                     <NavBar/>
                 </Grid>
                 <Grid item xs={12} className={classes.searchBar}>
-                    {/* <SearchBar/> */}
+                    <SearchBar/>
                 </Grid>
                 <Grid item xs={12} className={classes.recommendation}>
                     <Recommendation/>
