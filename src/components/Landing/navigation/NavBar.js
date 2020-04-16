@@ -12,6 +12,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -37,6 +38,16 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('md')]: {
       display: 'none',
     },
+  },
+  linkStyle: {
+    fontWeight: 'bold',
+    color: 'white',
+    top: '3px',
+    padding: '15px',
+    fontSize: '1.2em',
+    textDecoration: 'none',
+    fontFamily: 'sans-serif',
+    position: 'relative',
   },
 }));
 
@@ -92,14 +103,15 @@ export default function NavBar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem>Advance Search</MenuItem>
       <MenuItem>
-        <IconButton aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="secondary">
-            <MailIcon />
-          </Badge>
-        </IconButton>
-        <p>Messages</p>
+        <Link to="/" style={{color:'black', fontSize: '1em',}} className={classes.linkStyle}>
+              Home
+        </Link>
+      </MenuItem>
+      <MenuItem>
+        <Link to="/advsearch" style={{color:'black', fontSize: '1em',}} className={classes.linkStyle}>
+              Advanced
+        </Link>
       </MenuItem>
       <MenuItem>
         <IconButton aria-label="show 11 new notifications" color="inherit">
@@ -140,6 +152,12 @@ export default function NavBar() {
           </Typography>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
+            <Link to="/" className={classes.linkStyle}>
+              Home
+            </Link>
+              <Link to="/advsearch" style={{marginRight: '20px',}} className={classes.linkStyle}>
+                Advanced
+            </Link>
             <IconButton aria-label="show 17 new notifications" color="inherit">
               <Badge badgeContent={17} color="secondary">
                 <NotificationsIcon />
