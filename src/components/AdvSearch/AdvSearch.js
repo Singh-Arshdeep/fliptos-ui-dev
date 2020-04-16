@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import NavBar from '../landing/navigation/NavBar';
 import Recommendation from '../landing/recommendation/Recommendation';
 
 const useStyles = makeStyles((theme) => ({

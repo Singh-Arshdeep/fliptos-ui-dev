@@ -80,6 +80,7 @@ export default function SearchBar(props) {
           <div style={{height:'100vh'}}>
           <AppBar position="sticky">
             <Toolbar>
+              <div className='searchContainer'>
               <div className={classes.search}>
                 <div className={classes.searchIcon}>
                   <SearchIcon />
@@ -92,6 +93,7 @@ export default function SearchBar(props) {
                   }}
                   inputProps={{ 'aria-label': 'search' }}
                 />
+                </div>
               </div>
             </Toolbar>
           </AppBar>

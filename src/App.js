@@ -25,8 +25,14 @@ const useStyles = makeStyles((theme) => ({
   },
   footer: {
       height: '10vh',
-      backgroundColor: 'black'
+      backgroundColor: 'black',
+      color: 'white',
+      width: '100%'
   },
+  footerContent: {
+   marginLeft:'80%',
+   marginTop: '3vh',
+  }
 }));
 
 function App() {
@@ -48,6 +54,7 @@ function App() {
       </Switch>
       <Grid container spacing={0}>
         <Grid item xs={12} className={classes.footer}>
+          <div className={classes.footerContent}>All rights reserved &copy; 2020</div>
         </Grid>
       </Grid>
     </HashRouter >
