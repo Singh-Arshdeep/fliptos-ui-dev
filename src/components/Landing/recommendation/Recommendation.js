@@ -31,7 +31,7 @@ export default function Recommendation() {
     }, []);
 
     const [activeItemIndex, setActiveItemIndex] = useState(0);
-    const chevronWidth = 40;
+    const chevronWidth = 50;
     return (
         <div style={{ padding: `0 ${chevronWidth}px` }}>
             <ItemsCarousel
