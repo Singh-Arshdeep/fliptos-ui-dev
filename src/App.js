@@ -13,14 +13,14 @@ const useStyles = makeStyles((theme) => ({
       height: '10vh',
       backgroundColor: 'yellow',
       [theme.breakpoints.down('xs')]: {
-          height: '6vh',
+          height: '9vh',
       }
   },
   searchBar: {
       height: '10vh',
       backgroundColor: 'red', 
       [theme.breakpoints.down('xs')]: {
-          height: '6vh',
+          height: '9vh',
       }
   },
   footer: {
@@ -39,7 +39,7 @@ function App() {
   const classes = useStyles();
   return (
     <HashRouter >
-      <Grid container spacing={0}>
+      <Grid container spacing={0} >
         <Grid item xs={12} className={classes.nav}>
           <NavBar />
         </Grid>
