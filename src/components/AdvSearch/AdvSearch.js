@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Recommendation from '../Landing/recommendation/Recommendation';
+import Recommendation from '../landing/recommendation/Recommendation';
 import BookInfo from './bookCards/bookInfo';
 
 

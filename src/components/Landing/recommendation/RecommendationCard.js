@@ -12,6 +12,11 @@ import sampleBookImg from './images/sampleBook.jpg';
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
+    width: '100%',
+    margin: 'auto',
+    padding: '1%',
+    height: '40vh',
+    marginTop: '5vh',
   },
 });
 
@@ -19,32 +24,34 @@ export default function ImgMediaCard(props) {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
-      <CardActionArea>
-        {/* <CardMedia
+    <div>
+      <Card className={classes.root}>
+        <CardActionArea>
+          {/* <CardMedia
           component="img"
           alt="Contemplative Reptile"
           height="140"
           image={sampleBookImg}
           title="Contemplative Reptile"
         /> */}
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {props.bookDetails.author}
-          </Typography>
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="h2">
+              {props.bookDetails.author}
+            </Typography>
             <h4>Title: {props.bookDetails.title}</h4>
             <h4>Publisher: {props.bookDetails.publisher}</h4>
             <h4>Pages: {props.bookDetails.pages}</h4>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
+          </CardContent>
+        </CardActionArea>
+        <CardActions>
+          <Button size="small" color="primary">
+            Share
         </Button>
-        <Button size="small" color="primary">
-          Learn More
+          <Button size="small" color="primary">
+            Learn More
         </Button>
-      </CardActions>
-    </Card>
+        </CardActions>
+      </Card>
+    </div>
   );
 }

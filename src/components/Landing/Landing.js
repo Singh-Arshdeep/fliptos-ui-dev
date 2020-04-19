@@ -7,14 +7,17 @@ import FindOnMap from './findonmap/FindOnMap';
 const useStyles = makeStyles((theme) => ({
     recommendation: {
         height: '50vh',
+        position: 'relative'
     },
     category: {
         height: '80vh',
-        backgroundColor: 'orange'
+        backgroundColor: 'orange',
+        position: 'relative'
     },
     map: {
         height: '40vh',
-        backgroundColor: 'pink'
+        backgroundColor: 'pink',
+        position: 'relative'
     },
 }));
 

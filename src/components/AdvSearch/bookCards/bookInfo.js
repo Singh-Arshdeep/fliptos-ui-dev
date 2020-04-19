@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import BookCard from './bookCard';
-import {initialData} from '../../Landing/recommendation/recommendationDummyData';
+import {initialData} from '../../landing/recommendation/recommendationDummyData';
 
 function BookInfo() {
    
