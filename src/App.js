@@ -5,9 +5,9 @@ import {
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Landing from './components/landing/Landing';
-import AdvSearch from './components/AdvSearch/AdvSearch';
+import AdvSearch from './components/advSearch/AdvSearch';
 import NavBar from './components/landing/navigation/NavBar';
-import SearchBar from './components/landing/search/SearchBar';
+import SearchBar from './components/landing/search/SearchBar'
 import './App.css';
 
 const useStyles = makeStyles((theme) => ({

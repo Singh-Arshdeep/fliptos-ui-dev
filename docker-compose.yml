@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+
+  flipapi:
+    container_name: flipapi
+    image: node:12.14.1
+    build: .
+    volumes:
+      - .:/usr/app
+    working_dir: /usr/app
+    command: npm start
+    ports:
+      - 3000:3000
+    tty: true
+   
