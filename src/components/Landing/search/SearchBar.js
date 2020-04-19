@@ -1,8 +1,10 @@
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import { fade, makeStyles } from '@material-ui/core/styles';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import {
+  fade, makeStyles, createMuiTheme, ThemeProvider,
+} from '@material-ui/core/styles';
+
 import CssBaseline from '@material-ui/core/CssBaseline';
 import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
@@ -57,15 +59,15 @@ const theme = createMuiTheme({
   overrides: {
     MuiPaper: {
       elevation4: {
-        boxShadow: '0px 0px 0px 0px rgba(0,0,0,0.2), 0px 0px 2px 0px rgba(0,0,0,0.14), 0px 2px 2px 0px rgba(0,0,0,0.12)'
-      }
+        boxShadow: '0px 0px 0px 0px rgba(0,0,0,0.2), 0px 0px 2px 0px rgba(0,0,0,0.14), 0px 2px 2px 0px rgba(0,0,0,0.12)',
+      },
     },
     MuiInputBase: {
       root: {
         width: '90%',
-        height: '100%'
-      }
-    }
+        height: '100%',
+      },
+    },
   },
 });
 
@@ -75,30 +77,30 @@ export default function SearchBar(props) {
   return (
     <div>
       <ThemeProvider theme={theme}>
-        <React.Fragment >
+        <>
           <CssBaseline />
-          <div style={{height:'100vh'}}>
-          <AppBar position="sticky">
-            <Toolbar>
-              <div className='searchContainer'>
-              <div className={classes.search}>
-                <div className={classes.searchIcon}>
-                  <SearchIcon />
+          <div style={{ height: '100vh' }}>
+            <AppBar position="sticky">
+              <Toolbar>
+                <div className="searchContainer">
+                  <div className={classes.search}>
+                    <div className={classes.searchIcon}>
+                      <SearchIcon />
+                    </div>
+                    <InputBase
+                      placeholder="Search…"
+                      classes={{
+                        root: classes.inputRoot,
+                        input: classes.inputInput,
+                      }}
+                      inputProps={{ 'aria-label': 'search' }}
+                    />
+                  </div>
                 </div>
-                <InputBase
-                  placeholder="Search…"
-                  classes={{
-                    root: classes.inputRoot,
-                    input: classes.inputInput,
-                  }}
-                  inputProps={{ 'aria-label': 'search' }}
-                />
-                </div>
-              </div>
-            </Toolbar>
-          </AppBar>
+              </Toolbar>
+            </AppBar>
           </div>
-        </React.Fragment>
+        </>
       </ThemeProvider>
     </div>
   );

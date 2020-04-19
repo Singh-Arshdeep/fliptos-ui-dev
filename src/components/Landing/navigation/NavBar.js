@@ -1,5 +1,5 @@
 import React from 'react';
-import { fade, makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -11,7 +11,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -103,13 +103,13 @@ export default function NavBar() {
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
-        <Link to="/" style={{color:'black', fontSize: '1em',}} className={classes.linkStyle}>
-              Home
+        <Link to="/" style={{ color: 'black', fontSize: '1em' }} className={classes.linkStyle}>
+          Home
         </Link>
       </MenuItem>
       <MenuItem>
-        <Link to="/advsearch" style={{color:'black', fontSize: '1em',}} className={classes.linkStyle}>
-              Advanced
+        <Link to="/advsearch" style={{ color: 'black', fontSize: '1em' }} className={classes.linkStyle}>
+          Advanced
         </Link>
       </MenuItem>
       <MenuItem>
@@ -154,8 +154,8 @@ export default function NavBar() {
             <Link to="/" className={classes.linkStyle}>
               Home
             </Link>
-              <Link to="/advsearch" style={{marginRight: '20px',}} className={classes.linkStyle}>
-                Advanced
+            <Link to="/advsearch" style={{ marginRight: '20px' }} className={classes.linkStyle}>
+              Advanced
             </Link>
             <IconButton aria-label="show 17 new notifications" color="inherit">
               <Badge badgeContent={17} color="secondary">
