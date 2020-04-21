@@ -1,0 +1,11 @@
+.carousel .slider-wrapper.axis-horizontal .slider .slide {
+    height: 50vh !important;
+}
+
+.carousel {
+    height: 30% !important;
+}
+
+.carousel .control-dots {
+    width: 85%;
+}

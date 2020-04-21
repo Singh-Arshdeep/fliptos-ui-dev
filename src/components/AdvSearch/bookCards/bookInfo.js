@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import BookCard from './bookCard';
-import {initialData} from '../../landing/recommendation/recommendationDummyData';
+import initialData from '../../landing/recommendation/recommendationDummyData';
 
 function BookInfo() {
   const [bookInfo] = useState(initialData.books);
