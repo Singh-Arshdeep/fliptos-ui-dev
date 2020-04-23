@@ -1,25 +1,34 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
-    width: '100%',
-    margin: 'auto',
-    padding: '1%',
-    height: '40vh',
-    marginTop: '5vh',
+    width: "100%",
+    margin: "auto",
+    padding: "1%",
+    height: "40vh",
+    marginTop: "5vh",
   },
 });
 
 export default function ImgMediaCard(props) {
   const classes = useStyles();
+  const history = useHistory();
+
+  const handleClickViewItem = (bookDetails) => {
+    history.push({
+      pathname: "/ViewItem",
+      bookDetails,
+    });
+  };
 
   return (
     <div>
@@ -51,11 +60,12 @@ export default function ImgMediaCard(props) {
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Button size="small" color="primary">
-            Share
-          </Button>
-          <Button size="small" color="primary">
-            Learn More
+          <Button
+            size="small"
+            color="primary"
+            onClick={() => handleClickViewItem(props.bookDetails)}
+          >
+            View
           </Button>
         </CardActions>
       </Card>

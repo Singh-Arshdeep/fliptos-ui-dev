@@ -24,7 +24,7 @@ export default function Recommendation() {
   ));
 
   const [windowDimensions, setWindowDimensions] = useState(
-    getWindowDimensions(),
+    getWindowDimensions()
   );
 
   useEffect(() => {
@@ -49,20 +49,20 @@ export default function Recommendation() {
           windowDimensions.width > 900
             ? 4
             : windowDimensions.width > 600
-              ? 2
-              : 1
+            ? 2
+            : 1
         }
         gutter={10}
-        leftChevron={(
+        leftChevron={
           <IconButton aria-label="left" color="primary">
             <ChevronLeftIcon />
           </IconButton>
-        )}
-        rightChevron={(
+        }
+        rightChevron={
           <IconButton aria-label="right" color="primary">
             <ChevronRightIcon />
           </IconButton>
-        )}
+        }
         outsideChevron
         chevronWidth={chevronWidth}
       >

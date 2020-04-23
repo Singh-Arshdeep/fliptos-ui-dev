@@ -9,10 +9,10 @@
 //   expect(linkElement).toBeInTheDocument();
 // });
 
-test('Fake Test', () => {
+test("Fake Test", () => {
   expect(true).toBeTruthy();
 });
 
-test('Fake Test 2', () => {
+test("Fake Test 2", () => {
   expect(true).toBeTruthy();
 });
