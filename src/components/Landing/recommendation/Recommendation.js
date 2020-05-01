@@ -68,6 +68,7 @@ export default function Recommendation() {
       >
         {recommendedBooksCards}
       </ItemsCarousel>
+      <hr style={{margin:'30px'}}></hr>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import { HashRouter, Route, Redirect, Switch } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Landing from "./components/landing/Landing";
-import AdvSearch from "./components/AdvSearch/AdvSearch";
+import AdvSearch from "./components/advSearch/AdvSearch";
 import NavBar from "./components/landing/navigation/NavBar";
 import SearchBar from "./components/landing/search/SearchBar";
 import ViewItem from "./components/viewItem/ViewItem";
@@ -13,9 +13,9 @@ import "./App.css";
 const useStyles = makeStyles((theme) => ({
   nav: {
     height: "10vh",
-    backgroundColor: "yellow",
+    backgroundColor: "white",
     [theme.breakpoints.down("xs")]: {
-      height: "9vh",
+      height: "9.5vh",
     },
   },
   searchBar: {
@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   },
   footer: {
     height: "10vh",
-    backgroundColor: "black",
+    backgroundColor: "#3f51b5",
     color: "white",
     width: "100%",
   },
